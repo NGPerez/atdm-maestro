@@ -1,0 +1,14 @@
+# Page Object: LoginPage
+# Variables requeridas: EMAIL, PASSWORD
+appId: com.example.flutter_ces
+---
+
+- tapOn:
+    text: Email
+    index: 1
+- inputText: ${EMAIL}
+
+- tapOn: Password
+- inputText: ${PASSWORD}
+
+- tapOn: Iniciar sesión

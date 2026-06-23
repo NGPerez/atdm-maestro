@@ -1,0 +1,15 @@
+appId: com.example.flutter_ces
+---
+- launchApp:
+    clearState: true
+
+- runFlow:
+    file: subflows/login_page.yaml
+    env:
+      EMAIL: "test@tecnoshopper.com"
+      PASSWORD: "password123"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- assertNotVisible: "Bienvenid@ a tu cuenta"
