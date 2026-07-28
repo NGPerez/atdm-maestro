@@ -1,0 +1,12 @@
+appId: com.example.flutter_ces
+---
+- assertVisible: "Carrito de Compras"
+
+- tapOn:
+    point: 60%,21%
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- tapOn:
+    point: 75%,27%

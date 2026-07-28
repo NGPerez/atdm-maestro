@@ -1,0 +1,13 @@
+appId: com.example.flutter_ces
+---
+- tapOn: "${output.registerPagePom.botones.necesitasRegistrarte}"
+
+- tapOn: "Email"
+- inputText: ${EMAIL}
+
+- tapOn:
+    text: "Contraseña"
+    index: 1
+- inputText: ${PASSWORD}
+
+- tapOn: "${output.registerPagePom.botones.registrarse}"

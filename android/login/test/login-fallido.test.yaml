@@ -1,0 +1,16 @@
+appId: com.example.flutter_ces
+---
+- runFlow: ../load-data-pom.yaml
+
+- launchApp:
+    clearState: true
+
+- runFlow:
+    file: ../task/login.yaml
+    env:
+      EMAIL: "${output.loginData.credencialesFallidas.email}"
+      PASSWORD: "${output.loginData.credencialesFallidas.password}"
+
+- assertVisible: "${output.loginData.mensajes.error}"
+
+- tapOn: "OK"

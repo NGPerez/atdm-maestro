@@ -1,0 +1,34 @@
+appId: com.example.flutter_ces
+---
+- waitForAnimationToEnd:
+    timeout: 3000
+
+- assertVisible: "Teclado Mecánico\nTeclado retroiluminado switch blue\n$80"
+
+- waitForAnimationToEnd:
+    timeout: 1000
+
+- tapOn:
+    point: 55%,84%
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- assertVisible:
+    text: "${output.profileData.mensajes.pantallaCuenta}"
+
+- tapOn: "${output.profilePagePom.campos.nombre}"
+- inputText: ${NOMBRE}
+
+- tapOn: "${output.profilePagePom.campos.telefono}"
+- inputText: ${TELEFONO}
+
+- scrollUntilVisible:
+    element: "Guardar"
+
+- tapOn: "${output.profilePagePom.botones.guardar}"
+
+- assertVisible:
+    text: "${output.profileData.mensajes.actualizacionExitosa}"
+
+- tapOn: "${output.profilePagePom.botones.volver}"

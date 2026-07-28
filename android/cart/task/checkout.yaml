@@ -1,0 +1,68 @@
+appId: com.example.flutter_ces
+---
+- tapOn: "${output.cartPagePom.botones.finalizarCompra}"
+
+- scrollUntilVisible:
+    element: "Siguiente"
+
+- tapOn: "${output.cartPagePom.botones.siguiente}"
+
+- assertVisible:
+    text: "${output.cartData.mensajes.informacion}"
+
+- tapOn: "${output.cartPagePom.campos.email}"
+- inputText: ${EMAIL}
+
+- tapOn: "${output.cartPagePom.campos.nombre}"
+- inputText: ${NOMBRE}
+
+- tapOn: "${output.cartPagePom.campos.apellido}"
+- inputText: ${APELLIDO}
+
+- tapOn: "${output.cartPagePom.campos.direccion}"
+- inputText: ${DIRECCION}
+
+- scrollUntilVisible:
+    element: "Ciudad"
+
+- tapOn: "${output.cartPagePom.campos.ciudad}"
+- inputText: ${CIUDAD}
+
+- tapOn: "${output.cartPagePom.campos.codigoPostal}"
+- inputText: ${CODIGO_POSTAL}
+
+- scrollUntilVisible:
+    element: "Continuar al pago"
+
+- tapOn: "${output.cartPagePom.botones.continuarAlPago}"
+
+- assertVisible:
+    text: "${output.cartData.mensajes.pago}"
+
+- scrollUntilVisible:
+    element:
+      point: 12%,43%
+
+- tapOn: "4111 2222 3333 4440"
+- inputText: ${NUMERO_TARJETA}
+
+- scrollUntilVisible:
+    element: "MM/YY"
+
+- tapOn: "${output.cartPagePom.campos.nombreTarjeta}"
+- inputText: ${NOMBRE_TARJETA}
+
+- tapOn: "MM/YY"
+- inputText: ${FECHA_EXPIRACION}
+
+- tapOn: "000"
+- inputText: ${CODIGO_SEGURIDAD}
+
+- scrollUntilVisible:
+    element: "NOTIFICACIONES DE COMPRA"
+
+- tapOn: "Comprar\n$70"
+
+- assertVisible: "¡Tu pedido ha sido procesado con éxito!"
+
+- tapOn: "Volver al inicio"

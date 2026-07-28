@@ -1,0 +1,4 @@
+appId: com.example.flutter_ces
+---
+- runScript: data/register.data.js
+- runScript: pom/register-page.pom.js

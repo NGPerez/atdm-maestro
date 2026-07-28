@@ -1,0 +1,15 @@
+appId: com.example.flutter_ces
+---
+- tapOn:
+    text: "${output.loginPagePom.campos.email}"
+    index: 1
+- inputText: ${EMAIL}
+
+- tapOn: "${output.loginPagePom.campos.password}"
+- inputText: ${PASSWORD}
+
+- tapOn:
+    id: "0_resource_name_obfuscated"
+    index: 48
+
+- tapOn: "${output.loginPagePom.botones.iniciarSesion}"

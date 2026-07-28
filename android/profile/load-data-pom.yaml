@@ -1,0 +1,6 @@
+appId: com.example.flutter_ces
+---
+- runScript: data/profile.data.js
+- runScript: pom/profile-page.pom.js
+- runScript: ../login/data/login.data.js
+- runScript: ../login/pom/login-page.pom.js

@@ -1,0 +1,39 @@
+appId: com.example.flutter_ces
+---
+- runFlow: ../load-data-pom.yaml
+
+- launchApp:
+    clearState: true
+
+# 1. registrar correo nuevo
+- runFlow:
+    file: ../task/register.yaml
+    env:
+      EMAIL: "${output.registerData.credencialesDuplicadas.email}"
+      PASSWORD: "${output.registerData.credencialesDuplicadas.password}"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- assertVisible:
+    text: "${output.registerData.mensajes.exito}"
+
+- tapOn: "OK"
+
+- waitForAnimationToEnd:
+    timeout: 3000
+
+# 2. volver a registrar correo paso 1
+- runFlow:
+    file: ../task/register.yaml
+    env:
+      EMAIL: "${output.registerData.credencialesDuplicadas.email}"
+      PASSWORD: "${output.registerData.credencialesDuplicadas.password}"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- assertVisible:
+    text: "${output.registerData.mensajes.error}"
+
+- tapOn: "OK"

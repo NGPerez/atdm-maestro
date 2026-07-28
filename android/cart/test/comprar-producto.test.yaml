@@ -1,0 +1,38 @@
+appId: com.example.flutter_ces
+---
+- runFlow: ../load-data-pom.yaml
+
+- launchApp:
+    clearState: true
+
+# 1. iniciar sesion
+- runFlow:
+    file: ../../login/task/login.yaml
+    env:
+      EMAIL: "${output.loginData.credencialesExitosas.email}"
+      PASSWORD: "${output.loginData.credencialesExitosas.password}"
+
+- waitForAnimationToEnd:
+    timeout: 15000
+
+- assertVisible:
+    point: 4%,18%
+
+# 2. agregar producto al carrito
+- runFlow:
+    file: ../task/add-to-cart.yaml
+
+# 3. finalizar compra
+- runFlow:
+    file: ../task/checkout.yaml
+    env:
+      EMAIL: "${output.cartData.usuario.email}"
+      NOMBRE: "${output.cartData.usuario.nombre}"
+      APELLIDO: "${output.cartData.usuario.apellido}"
+      DIRECCION: "${output.cartData.usuario.direccion}"
+      CIUDAD: "${output.cartData.usuario.ciudad}"
+      CODIGO_POSTAL: "${output.cartData.usuario.codigoPostal}"
+      NUMERO_TARJETA: "${output.cartData.tarjeta.numero}"
+      NOMBRE_TARJETA: "${output.cartData.tarjeta.nombre}"
+      FECHA_EXPIRACION: "${output.cartData.tarjeta.fechaExpiracion}"
+      CODIGO_SEGURIDAD: "${output.cartData.tarjeta.codigoSeguridad}"

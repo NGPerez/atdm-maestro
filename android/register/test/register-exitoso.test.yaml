@@ -1,0 +1,20 @@
+appId: com.example.flutter_ces
+---
+- runFlow: ../load-data-pom.yaml
+
+- launchApp:
+    clearState: true
+
+- runFlow:
+    file: ../task/register.yaml
+    env:
+      EMAIL: "${output.registerData.credencialesExitosas.email}"
+      PASSWORD: "${output.registerData.credencialesExitosas.password}"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- assertVisible:
+    text: "${output.registerData.mensajes.exito}"
+
+- tapOn: "OK"

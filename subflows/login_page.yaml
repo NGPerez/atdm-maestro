@@ -11,4 +11,8 @@ appId: com.example.flutter_ces
 - tapOn: Password
 - inputText: ${PASSWORD}
 
-- tapOn: Iniciar sesión
+- tapOn:
+    text: "Iniciar sesión"
+    index: 1
+
+- tapOn: "OK"

@@ -1,0 +1,17 @@
+appId: com.example.flutter_ces
+---
+- tapOn: "Teclado Mecánico\nTeclado retroiluminado switch blue\n$80"
+
+- tapOn: "${output.cartPagePom.botones.agregarAlCarrito}"
+
+- assertVisible:
+    text: "${output.cartData.mensajes.productoAgregado}"
+
+- assertVisible:
+    point: 1%,8%
+
+- tapOn:
+    point: 1%,8%
+
+- tapOn:
+    point: 90%,94%
