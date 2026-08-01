@@ -7,11 +7,8 @@ appId: com.example.flutter_ces
 - assertVisible:
     text: "${output.cartData.mensajes.productoAgregado}"
 
-- assertVisible:
-    point: 1%,8%
+- tapOn:
+    id: "back_button"
 
 - tapOn:
-    point: 1%,8%
-
-- tapOn:
-    point: 90%,94%
+    id: "cart_button"

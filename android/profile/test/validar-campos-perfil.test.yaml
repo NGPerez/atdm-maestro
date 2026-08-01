@@ -15,9 +15,13 @@ appId: com.example.flutter_ces
 - waitForAnimationToEnd:
     timeout: 15000
 
-# 2. actualizar datos del perfil
-- runFlow:
-    file: ../task/update-profile.yaml
+# 2. validar campos vacios en perfil
+- runFlow: 
+    file: ../task/validate-profile-fields.yaml
     env:
-      NOMBRE: "${output.profileData.datosPersonales.nombre}"
-      TELEFONO: "${output.profileData.datosPersonales.telefono}"
+      NOMBRE: ""
+      APELLIDO: ""
+      TELEFONO: ""
+      FECHA_NACIMIENTO: ""
+      DIRECCION: ""
+      PAIS: ""

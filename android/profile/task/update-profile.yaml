@@ -9,7 +9,7 @@ appId: com.example.flutter_ces
     timeout: 1000
 
 - tapOn:
-    point: 55%,84%
+    id: "account_button"
 
 - waitForAnimationToEnd:
     timeout: 2000
@@ -26,9 +26,10 @@ appId: com.example.flutter_ces
 - scrollUntilVisible:
     element: "Guardar"
 
-- tapOn: "${output.profilePagePom.botones.guardar}"
+- tapOn: "Guardar"
 
 - assertVisible:
     text: "${output.profileData.mensajes.actualizacionExitosa}"
 
-- tapOn: "${output.profilePagePom.botones.volver}"
+- tapOn:
+    id: "back_button"

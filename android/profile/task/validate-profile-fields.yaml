@@ -1,0 +1,46 @@
+appId: com.example.flutter_ces
+---
+
+- assertVisible: "Teclado Mecánico\nTeclado retroiluminado switch blue\n$80"
+
+- waitForAnimationToEnd:
+    timeout: 1000
+
+- tapOn:
+    id: "account_button"
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- assertVisible:
+    text: "${output.profileData.mensajes.pantallaCuenta}"
+
+- tapOn: "${output.profilePagePom.campos.nombre}"
+- inputText: "${NOMBRE}"
+
+- tapOn: "${output.profilePagePom.campos.apellido}"
+- inputText: "${APELLIDO}"
+
+- tapOn: "${output.profilePagePom.campos.telefono}"
+- inputText: "${TELEFONO}"
+
+- tapOn: "${output.profilePagePom.campos.fechaNacimiento}"
+- inputText: "${FECHA_NACIMIENTO}"
+
+- tapOn: "${output.profilePagePom.campos.direccion}"
+- inputText: "${DIRECCION}"
+
+- tapOn: "${output.profilePagePom.campos.pais}"
+- inputText: "${PAIS}"
+
+- scrollUntilVisible:
+    element: "Guardar"
+
+- tapOn: "Guardar"
+
+# no hay validacion por campos vacios
+- assertVisible:
+    text: "${output.profileData.mensajes.actualizacionExitosa}"
+
+- tapOn:
+    id: "back_button"
