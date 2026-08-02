@@ -1,4 +1,8 @@
 appId: com.example.flutter_ces
+tags:
+  - register
+  - happy_path
+  - high_priority
 ---
 - runFlow: ../load-data-pom.yaml
 

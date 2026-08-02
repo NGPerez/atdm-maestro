@@ -1,0 +1,751 @@
+[ {
+  "command" : {
+    "defineVariablesCommand" : {
+      "env" : {
+        "MAESTRO_OUTPUT_DIR" : "D:\\.maestro",
+        "MAESTRO_FILENAME" : "register-exitoso.test",
+        "MAESTRO_DEVICE_UDID" : "emulator-5554",
+        "MAESTRO_SHARD_ID" : "1",
+        "MAESTRO_SHARD_INDEX" : "0"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633222474,
+    "duration" : 0,
+    "sequenceNumber" : 0,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "defineVariablesCommand" : {
+        "env" : {
+          "MAESTRO_OUTPUT_DIR" : "D:\\.maestro",
+          "MAESTRO_FILENAME" : "register-exitoso.test",
+          "MAESTRO_DEVICE_UDID" : "emulator-5554",
+          "MAESTRO_SHARD_ID" : "1",
+          "MAESTRO_SHARD_INDEX" : "0"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "applyConfigurationCommand" : {
+      "config" : {
+        "appId" : "com.example.flutter_ces",
+        "tags" : [ "register", "happy_path", "high_priority" ]
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633222490,
+    "duration" : 0,
+    "sequenceNumber" : 1,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "applyConfigurationCommand" : {
+        "config" : {
+          "appId" : "com.example.flutter_ces",
+          "tags" : [ "register", "happy_path", "high_priority" ]
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runFlowCommand" : {
+      "commands" : [ {
+        "applyConfigurationCommand" : {
+          "config" : {
+            "appId" : "com.example.flutter_ces"
+          },
+          "optional" : false
+        }
+      }, {
+        "runScriptCommand" : {
+          "script" : "output.registerData = {\r\n  credencialesExitosas: {\r\n    email: \"nuevo@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesDuplicadas: {\r\n    email: \"duplicado@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  mensajes: {\r\n    exito: \"¡Tu cuenta ha sido registrada correctamente!\",\r\n    error: \"El correo electrónico ya está registrado.\"\r\n  }\r\n}",
+          "sourceDescription" : "data/register.data.js",
+          "optional" : false,
+          "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\data"
+        }
+      }, {
+        "runScriptCommand" : {
+          "script" : "output.registerPagePom = {\r\n  campos: {\r\n    email: \"Email\",\r\n    password: \"Contraseña\"\r\n  },\r\n\r\n  botones: {\r\n    necesitasRegistrarte: \"¿Necesitás registrarte?\",\r\n    registrarse: \"Registrarse\"\r\n  }\r\n}\r\n",
+          "sourceDescription" : "pom/register-page.pom.js",
+          "optional" : false,
+          "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\pom"
+        }
+      } ],
+      "sourceDescription" : "../load-data-pom.yaml",
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633222491,
+    "duration" : 48,
+    "sequenceNumber" : 2,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "runFlowCommand" : {
+        "commands" : [ {
+          "applyConfigurationCommand" : {
+            "config" : {
+              "appId" : "com.example.flutter_ces"
+            },
+            "optional" : false
+          }
+        }, {
+          "runScriptCommand" : {
+            "script" : "output.registerData = {\r\n  credencialesExitosas: {\r\n    email: \"nuevo@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesDuplicadas: {\r\n    email: \"duplicado@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  mensajes: {\r\n    exito: \"¡Tu cuenta ha sido registrada correctamente!\",\r\n    error: \"El correo electrónico ya está registrado.\"\r\n  }\r\n}",
+            "sourceDescription" : "data/register.data.js",
+            "optional" : false,
+            "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\data"
+          }
+        }, {
+          "runScriptCommand" : {
+            "script" : "output.registerPagePom = {\r\n  campos: {\r\n    email: \"Email\",\r\n    password: \"Contraseña\"\r\n  },\r\n\r\n  botones: {\r\n    necesitasRegistrarte: \"¿Necesitás registrarte?\",\r\n    registrarse: \"Registrarse\"\r\n  }\r\n}\r\n",
+            "sourceDescription" : "pom/register-page.pom.js",
+            "optional" : false,
+            "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\pom"
+          }
+        } ],
+        "sourceDescription" : "../load-data-pom.yaml",
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "applyConfigurationCommand" : {
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633222491,
+    "duration" : 1,
+    "sequenceNumber" : 3,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "applyConfigurationCommand" : {
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runScriptCommand" : {
+      "script" : "output.registerData = {\r\n  credencialesExitosas: {\r\n    email: \"nuevo@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesDuplicadas: {\r\n    email: \"duplicado@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  mensajes: {\r\n    exito: \"¡Tu cuenta ha sido registrada correctamente!\",\r\n    error: \"El correo electrónico ya está registrado.\"\r\n  }\r\n}",
+      "sourceDescription" : "data/register.data.js",
+      "optional" : false,
+      "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\data"
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633222495,
+    "duration" : 39,
+    "sequenceNumber" : 4,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "runScriptCommand" : {
+        "script" : "output.registerData = {\r\n  credencialesExitosas: {\r\n    email: \"nuevo@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesDuplicadas: {\r\n    email: \"duplicado@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  mensajes: {\r\n    exito: \"¡Tu cuenta ha sido registrada correctamente!\",\r\n    error: \"El correo electrónico ya está registrado.\"\r\n  }\r\n}",
+        "sourceDescription" : "data/register.data.js",
+        "optional" : false,
+        "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\data"
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runScriptCommand" : {
+      "script" : "output.registerPagePom = {\r\n  campos: {\r\n    email: \"Email\",\r\n    password: \"Contraseña\"\r\n  },\r\n\r\n  botones: {\r\n    necesitasRegistrarte: \"¿Necesitás registrarte?\",\r\n    registrarse: \"Registrarse\"\r\n  }\r\n}\r\n",
+      "sourceDescription" : "pom/register-page.pom.js",
+      "optional" : false,
+      "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\pom"
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633222534,
+    "duration" : 5,
+    "sequenceNumber" : 5,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "runScriptCommand" : {
+        "script" : "output.registerPagePom = {\r\n  campos: {\r\n    email: \"Email\",\r\n    password: \"Contraseña\"\r\n  },\r\n\r\n  botones: {\r\n    necesitasRegistrarte: \"¿Necesitás registrarte?\",\r\n    registrarse: \"Registrarse\"\r\n  }\r\n}\r\n",
+        "sourceDescription" : "pom/register-page.pom.js",
+        "optional" : false,
+        "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\register\\pom"
+      }
+    }
+  }
+}, {
+  "command" : {
+    "launchAppCommand" : {
+      "appId" : "com.example.flutter_ces",
+      "clearState" : true,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633222540,
+    "duration" : 4843,
+    "sequenceNumber" : 6,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "launchAppCommand" : {
+        "appId" : "com.example.flutter_ces",
+        "clearState" : true,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runFlowCommand" : {
+      "commands" : [ {
+        "defineVariablesCommand" : {
+          "env" : {
+            "EMAIL" : "${output.registerData.credencialesExitosas.email}",
+            "PASSWORD" : "${output.registerData.credencialesExitosas.password}"
+          },
+          "optional" : false
+        }
+      }, {
+        "applyConfigurationCommand" : {
+          "config" : {
+            "appId" : "com.example.flutter_ces"
+          },
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "textRegex" : "${output.registerPagePom.botones.necesitasRegistrarte}",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "textRegex" : "Email",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      }, {
+        "inputTextCommand" : {
+          "text" : "${EMAIL}",
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "textRegex" : "Contraseña",
+            "index" : "1",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      }, {
+        "inputTextCommand" : {
+          "text" : "${PASSWORD}",
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "idRegex" : "0_resource_name_obfuscated",
+            "index" : "48",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "textRegex" : "${output.registerPagePom.botones.registrarse}",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      } ],
+      "sourceDescription" : "../task/register.yaml",
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633227383,
+    "duration" : 26051,
+    "sequenceNumber" : 7,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "runFlowCommand" : {
+        "commands" : [ {
+          "defineVariablesCommand" : {
+            "env" : {
+              "EMAIL" : "${output.registerData.credencialesExitosas.email}",
+              "PASSWORD" : "${output.registerData.credencialesExitosas.password}"
+            },
+            "optional" : false
+          }
+        }, {
+          "applyConfigurationCommand" : {
+            "config" : {
+              "appId" : "com.example.flutter_ces"
+            },
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "textRegex" : "${output.registerPagePom.botones.necesitasRegistrarte}",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "textRegex" : "Email",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        }, {
+          "inputTextCommand" : {
+            "text" : "${EMAIL}",
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "textRegex" : "Contraseña",
+              "index" : "1",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        }, {
+          "inputTextCommand" : {
+            "text" : "${PASSWORD}",
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "idRegex" : "0_resource_name_obfuscated",
+              "index" : "48",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "textRegex" : "${output.registerPagePom.botones.registrarse}",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        } ],
+        "sourceDescription" : "../task/register.yaml",
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "defineVariablesCommand" : {
+      "env" : {
+        "EMAIL" : "${output.registerData.credencialesExitosas.email}",
+        "PASSWORD" : "${output.registerData.credencialesExitosas.password}"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633227389,
+    "duration" : 7,
+    "sequenceNumber" : 8,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "defineVariablesCommand" : {
+        "env" : {
+          "EMAIL" : "nuevo@tecnoshopper.com",
+          "PASSWORD" : "password123"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "applyConfigurationCommand" : {
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633227397,
+    "duration" : 0,
+    "sequenceNumber" : 9,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "applyConfigurationCommand" : {
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "${output.registerPagePom.botones.necesitasRegistrarte}",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633227397,
+    "duration" : 5268,
+    "sequenceNumber" : 10,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "¿Necesitás registrarte?",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "Email",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633232665,
+    "duration" : 1864,
+    "sequenceNumber" : 11,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "Email",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "inputTextCommand" : {
+      "text" : "${EMAIL}",
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633234529,
+    "duration" : 5116,
+    "sequenceNumber" : 12,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "inputTextCommand" : {
+        "text" : "nuevo@tecnoshopper.com",
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "Contraseña",
+        "index" : "1",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633239646,
+    "duration" : 4471,
+    "sequenceNumber" : 13,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "Contraseña",
+          "index" : "1",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "inputTextCommand" : {
+      "text" : "${PASSWORD}",
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633244118,
+    "duration" : 3564,
+    "sequenceNumber" : 14,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "inputTextCommand" : {
+        "text" : "password123",
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "idRegex" : "0_resource_name_obfuscated",
+        "index" : "48",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633247682,
+    "duration" : 3081,
+    "sequenceNumber" : 15,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "idRegex" : "0_resource_name_obfuscated",
+          "index" : "48",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "${output.registerPagePom.botones.registrarse}",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633250763,
+    "duration" : 2671,
+    "sequenceNumber" : 16,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "Registrarse",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "waitForAnimationToEndCommand" : {
+      "timeout" : "5000",
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633253434,
+    "duration" : 1178,
+    "sequenceNumber" : 17,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "waitForAnimationToEndCommand" : {
+        "timeout" : "5000",
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "assertConditionCommand" : {
+      "condition" : {
+        "visible" : {
+          "textRegex" : "${output.registerData.mensajes.exito}",
+          "optional" : false
+        }
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633254613,
+    "duration" : 105,
+    "sequenceNumber" : 18,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "assertConditionCommand" : {
+        "condition" : {
+          "visible" : {
+            "textRegex" : "¡Tu cuenta ha sido registrada correctamente!",
+            "optional" : false
+          }
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "OK",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633254719,
+    "duration" : 2656,
+    "sequenceNumber" : 19,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "OK",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+} ]

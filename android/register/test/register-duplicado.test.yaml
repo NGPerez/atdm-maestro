@@ -1,4 +1,7 @@
 appId: com.example.flutter_ces
+tags:
+  - register
+  - medium_priority
 ---
 - runFlow: ../load-data-pom.yaml
 

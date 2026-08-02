@@ -1,0 +1,663 @@
+[ {
+  "command" : {
+    "defineVariablesCommand" : {
+      "env" : {
+        "MAESTRO_OUTPUT_DIR" : "D:\\.maestro",
+        "MAESTRO_FILENAME" : "login-exitoso.test",
+        "MAESTRO_DEVICE_UDID" : "emulator-5554",
+        "MAESTRO_SHARD_ID" : "1",
+        "MAESTRO_SHARD_INDEX" : "0"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633190783,
+    "duration" : 0,
+    "sequenceNumber" : 0,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "defineVariablesCommand" : {
+        "env" : {
+          "MAESTRO_OUTPUT_DIR" : "D:\\.maestro",
+          "MAESTRO_FILENAME" : "login-exitoso.test",
+          "MAESTRO_DEVICE_UDID" : "emulator-5554",
+          "MAESTRO_SHARD_ID" : "1",
+          "MAESTRO_SHARD_INDEX" : "0"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "applyConfigurationCommand" : {
+      "config" : {
+        "appId" : "com.example.flutter_ces",
+        "tags" : [ "login", "happy_path", "high_priority", "regression" ]
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633190798,
+    "duration" : 1,
+    "sequenceNumber" : 1,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "applyConfigurationCommand" : {
+        "config" : {
+          "appId" : "com.example.flutter_ces",
+          "tags" : [ "login", "happy_path", "high_priority", "regression" ]
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runFlowCommand" : {
+      "commands" : [ {
+        "applyConfigurationCommand" : {
+          "config" : {
+            "appId" : "com.example.flutter_ces"
+          },
+          "optional" : false
+        }
+      }, {
+        "runScriptCommand" : {
+          "script" : "output.loginData = {\r\n  credencialesExitosas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesFallidas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password\"\r\n  },\r\n\r\n  mensajes: {\r\n    error: \"Error de inicio de sesión\"\r\n  }\r\n}",
+          "sourceDescription" : "data/login.data.js",
+          "optional" : false,
+          "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\data"
+        }
+      }, {
+        "runScriptCommand" : {
+          "script" : "output.loginPagePom = {\n  campos: {\n    email: \"Email\",\n    password: \"Password\"\n  },\n\n  botones: {\n    iniciarSesion: \"Iniciar sesión\"\n  }\n}\n",
+          "sourceDescription" : "pom/login-page.pom.js",
+          "optional" : false,
+          "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\pom"
+        }
+      } ],
+      "sourceDescription" : "../load-data-pom.yaml",
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633190799,
+    "duration" : 49,
+    "sequenceNumber" : 2,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "runFlowCommand" : {
+        "commands" : [ {
+          "applyConfigurationCommand" : {
+            "config" : {
+              "appId" : "com.example.flutter_ces"
+            },
+            "optional" : false
+          }
+        }, {
+          "runScriptCommand" : {
+            "script" : "output.loginData = {\r\n  credencialesExitosas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesFallidas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password\"\r\n  },\r\n\r\n  mensajes: {\r\n    error: \"Error de inicio de sesión\"\r\n  }\r\n}",
+            "sourceDescription" : "data/login.data.js",
+            "optional" : false,
+            "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\data"
+          }
+        }, {
+          "runScriptCommand" : {
+            "script" : "output.loginPagePom = {\n  campos: {\n    email: \"Email\",\n    password: \"Password\"\n  },\n\n  botones: {\n    iniciarSesion: \"Iniciar sesión\"\n  }\n}\n",
+            "sourceDescription" : "pom/login-page.pom.js",
+            "optional" : false,
+            "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\pom"
+          }
+        } ],
+        "sourceDescription" : "../load-data-pom.yaml",
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "applyConfigurationCommand" : {
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633190800,
+    "duration" : 0,
+    "sequenceNumber" : 3,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "applyConfigurationCommand" : {
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runScriptCommand" : {
+      "script" : "output.loginData = {\r\n  credencialesExitosas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesFallidas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password\"\r\n  },\r\n\r\n  mensajes: {\r\n    error: \"Error de inicio de sesión\"\r\n  }\r\n}",
+      "sourceDescription" : "data/login.data.js",
+      "optional" : false,
+      "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\data"
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633190803,
+    "duration" : 40,
+    "sequenceNumber" : 4,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "runScriptCommand" : {
+        "script" : "output.loginData = {\r\n  credencialesExitosas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password123\"\r\n  },\r\n\r\n  credencialesFallidas: {\r\n    email: \"test@tecnoshopper.com\",\r\n    password: \"password\"\r\n  },\r\n\r\n  mensajes: {\r\n    error: \"Error de inicio de sesión\"\r\n  }\r\n}",
+        "sourceDescription" : "data/login.data.js",
+        "optional" : false,
+        "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\data"
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runScriptCommand" : {
+      "script" : "output.loginPagePom = {\n  campos: {\n    email: \"Email\",\n    password: \"Password\"\n  },\n\n  botones: {\n    iniciarSesion: \"Iniciar sesión\"\n  }\n}\n",
+      "sourceDescription" : "pom/login-page.pom.js",
+      "optional" : false,
+      "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\pom"
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633190843,
+    "duration" : 4,
+    "sequenceNumber" : 5,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "runScriptCommand" : {
+        "script" : "output.loginPagePom = {\n  campos: {\n    email: \"Email\",\n    password: \"Password\"\n  },\n\n  botones: {\n    iniciarSesion: \"Iniciar sesión\"\n  }\n}\n",
+        "sourceDescription" : "pom/login-page.pom.js",
+        "optional" : false,
+        "scriptDir" : "D:\\taller-automaticacion-ces\\atdm-automation-maestro-main\\tecnoshopper-test-e2e\\android\\login\\pom"
+      }
+    }
+  }
+}, {
+  "command" : {
+    "launchAppCommand" : {
+      "appId" : "com.example.flutter_ces",
+      "clearState" : true,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633190849,
+    "duration" : 4762,
+    "sequenceNumber" : 6,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "launchAppCommand" : {
+        "appId" : "com.example.flutter_ces",
+        "clearState" : true,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "runFlowCommand" : {
+      "commands" : [ {
+        "defineVariablesCommand" : {
+          "env" : {
+            "EMAIL" : "${output.loginData.credencialesExitosas.email}",
+            "PASSWORD" : "${output.loginData.credencialesExitosas.password}"
+          },
+          "optional" : false
+        }
+      }, {
+        "applyConfigurationCommand" : {
+          "config" : {
+            "appId" : "com.example.flutter_ces"
+          },
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "textRegex" : "${output.loginPagePom.campos.email}",
+            "index" : "1",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      }, {
+        "inputTextCommand" : {
+          "text" : "${EMAIL}",
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "textRegex" : "${output.loginPagePom.campos.password}",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      }, {
+        "inputTextCommand" : {
+          "text" : "${PASSWORD}",
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "idRegex" : "0_resource_name_obfuscated",
+            "index" : "48",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      }, {
+        "tapOnElement" : {
+          "selector" : {
+            "textRegex" : "${output.loginPagePom.botones.iniciarSesion}",
+            "optional" : false
+          },
+          "retryIfNoChange" : false,
+          "waitUntilVisible" : false,
+          "longPress" : false,
+          "optional" : false
+        }
+      } ],
+      "sourceDescription" : "../task/login.yaml",
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633195611,
+    "duration" : 25149,
+    "sequenceNumber" : 7,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "runFlowCommand" : {
+        "commands" : [ {
+          "defineVariablesCommand" : {
+            "env" : {
+              "EMAIL" : "${output.loginData.credencialesExitosas.email}",
+              "PASSWORD" : "${output.loginData.credencialesExitosas.password}"
+            },
+            "optional" : false
+          }
+        }, {
+          "applyConfigurationCommand" : {
+            "config" : {
+              "appId" : "com.example.flutter_ces"
+            },
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "textRegex" : "${output.loginPagePom.campos.email}",
+              "index" : "1",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        }, {
+          "inputTextCommand" : {
+            "text" : "${EMAIL}",
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "textRegex" : "${output.loginPagePom.campos.password}",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        }, {
+          "inputTextCommand" : {
+            "text" : "${PASSWORD}",
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "idRegex" : "0_resource_name_obfuscated",
+              "index" : "48",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        }, {
+          "tapOnElement" : {
+            "selector" : {
+              "textRegex" : "${output.loginPagePom.botones.iniciarSesion}",
+              "optional" : false
+            },
+            "retryIfNoChange" : false,
+            "waitUntilVisible" : false,
+            "longPress" : false,
+            "optional" : false
+          }
+        } ],
+        "sourceDescription" : "../task/login.yaml",
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "defineVariablesCommand" : {
+      "env" : {
+        "EMAIL" : "${output.loginData.credencialesExitosas.email}",
+        "PASSWORD" : "${output.loginData.credencialesExitosas.password}"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633195620,
+    "duration" : 7,
+    "sequenceNumber" : 8,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "defineVariablesCommand" : {
+        "env" : {
+          "EMAIL" : "test@tecnoshopper.com",
+          "PASSWORD" : "password123"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "applyConfigurationCommand" : {
+      "config" : {
+        "appId" : "com.example.flutter_ces"
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633195627,
+    "duration" : 0,
+    "sequenceNumber" : 9,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "applyConfigurationCommand" : {
+        "config" : {
+          "appId" : "com.example.flutter_ces"
+        },
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "${output.loginPagePom.campos.email}",
+        "index" : "1",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633195627,
+    "duration" : 5759,
+    "sequenceNumber" : 10,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "Email",
+          "index" : "1",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "inputTextCommand" : {
+      "text" : "${EMAIL}",
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633201386,
+    "duration" : 6411,
+    "sequenceNumber" : 11,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "inputTextCommand" : {
+        "text" : "test@tecnoshopper.com",
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "${output.loginPagePom.campos.password}",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633207797,
+    "duration" : 3188,
+    "sequenceNumber" : 12,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "Password",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "inputTextCommand" : {
+      "text" : "${PASSWORD}",
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633210985,
+    "duration" : 3612,
+    "sequenceNumber" : 13,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "inputTextCommand" : {
+        "text" : "password123",
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "idRegex" : "0_resource_name_obfuscated",
+        "index" : "48",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633214599,
+    "duration" : 3352,
+    "sequenceNumber" : 14,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "idRegex" : "0_resource_name_obfuscated",
+          "index" : "48",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "tapOnElement" : {
+      "selector" : {
+        "textRegex" : "${output.loginPagePom.botones.iniciarSesion}",
+        "optional" : false
+      },
+      "retryIfNoChange" : false,
+      "waitUntilVisible" : false,
+      "longPress" : false,
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633217952,
+    "duration" : 2808,
+    "sequenceNumber" : 15,
+    "depth" : 1,
+    "evaluatedCommand" : {
+      "tapOnElement" : {
+        "selector" : {
+          "textRegex" : "Iniciar sesión",
+          "optional" : false
+        },
+        "retryIfNoChange" : false,
+        "waitUntilVisible" : false,
+        "longPress" : false,
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "waitForAnimationToEndCommand" : {
+      "timeout" : "5000",
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633220761,
+    "duration" : 1069,
+    "sequenceNumber" : 16,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "waitForAnimationToEndCommand" : {
+        "timeout" : "5000",
+        "optional" : false
+      }
+    }
+  }
+}, {
+  "command" : {
+    "assertConditionCommand" : {
+      "condition" : {
+        "visible" : {
+          "optional" : false
+        }
+      },
+      "optional" : false
+    }
+  },
+  "metadata" : {
+    "status" : "COMPLETED",
+    "timestamp" : 1785633221831,
+    "duration" : 104,
+    "sequenceNumber" : 17,
+    "depth" : 0,
+    "evaluatedCommand" : {
+      "assertConditionCommand" : {
+        "condition" : {
+          "visible" : {
+            "optional" : false
+          }
+        },
+        "optional" : false
+      }
+    }
+  }
+} ]

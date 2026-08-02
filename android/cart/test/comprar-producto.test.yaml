@@ -1,4 +1,9 @@
 appId: com.example.flutter_ces
+tags:
+  - carrito
+  - happy_path
+  - high_priority
+  - regression
 ---
 - runFlow: ../load-data-pom.yaml
 

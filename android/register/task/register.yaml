@@ -10,4 +10,8 @@ appId: com.example.flutter_ces
     index: 1
 - inputText: ${PASSWORD}
 
+- tapOn:
+    id: "0_resource_name_obfuscated"
+    index: 48
+
 - tapOn: "${output.registerPagePom.botones.registrarse}"

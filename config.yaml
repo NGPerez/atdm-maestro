@@ -1,0 +1,47 @@
+# Configuración de Suite de Pruebas Maestro para TecnoShopper
+
+# Configuración de descubrimiento de pruebas (flows)
+flows:
+  - android/login/test/*.test.yaml
+  - android/cart/test/*.test.yaml
+  - android/profile/test/*.test.yaml
+  - android/register/test/*.test.yaml
+
+# Configuración de etiquetas (tags) para inclusión
+includeTags:
+  - login
+  - register
+  - carrito
+  - profile
+  - happy_path
+  - high_priority
+  - medium_priority
+  - low_priority
+  - regression
+
+# Configuración de etiquetas (tags) para exclusión
+excludeTags:
+  - wip
+  - manual
+  - deprecated
+
+# Orden de ejecución de los flujos principales
+executionOrder:
+  continueOnFailure: false
+  flowsOrder:
+    - android/login/test/login-exitoso
+    - android/login/test/login-fallido
+    - android/register/test/register-exitoso
+    - android/register/test/register-duplicado
+    - android/cart/test/comprar-producto
+    - android/cart/test/cancelar-carrito
+    - android/profile/test/actualizar-perfil
+    - android/profile/test/validar-campos-perfil
+
+# Configuración de salida de evidencias
+testOutputDir: evidencias/maestro
+
+# Configuración de plataforma
+platform:
+  android:
+    disableAnimations: true

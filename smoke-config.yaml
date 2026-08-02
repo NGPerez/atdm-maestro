@@ -1,0 +1,39 @@
+# Configuración de Smoke Tests para TecnoShopper
+# Ejecuta solo los tests críticos y happy path para validación rápida
+
+# Configuración de descubrimiento de pruebas (flows)
+flows:
+  - android/login/test/*.test.yaml
+  - android/cart/test/*.test.yaml
+  - android/profile/test/*.test.yaml
+  - android/register/test/*.test.yaml
+
+# Configuración de etiquetas (tags) para inclusión
+# Solo ejecuta tests de happy path y alta prioridad
+includeTags:
+  - happy_path
+  - high_priority
+
+# Configuración de etiquetas (tags) para exclusión
+excludeTags:
+  - wip
+  - manual
+  - deprecated
+  - low_priority
+
+# Orden de ejecución para smoke tests
+executionOrder:
+  continueOnFailure: false
+  flowsOrder:
+    - android/login/test/login-exitoso
+    - android/register/test/register-exitoso
+    - android/cart/test/comprar-producto
+    - android/profile/test/actualizar-perfil
+
+# Configuración de salida de evidencias
+testOutputDir: evidencias/smoke
+
+# Configuración de plataforma
+platform:
+  android:
+    disableAnimations: true

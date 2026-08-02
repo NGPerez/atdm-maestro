@@ -1,4 +1,8 @@
 appId: com.example.flutter_ces
+tags:
+  - login
+  - medium_priority
+  - regression
 ---
 - runFlow: ../load-data-pom.yaml
 
